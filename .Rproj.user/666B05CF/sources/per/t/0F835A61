@@ -1,0 +1,28 @@
+{
+    "id": "0F835A61",
+    "path": null,
+    "project_path": null,
+    "type": "object_explorer",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1678385421796.0,
+    "source_on_save": false,
+    "relative_order": 2,
+    "properties": {
+        "id": "0deec87f14cd4efd912cdb07386cfe5b",
+        "name": "corpus",
+        "title": "corpus",
+        "language": "R",
+        "source_window_id": "",
+        "Source": "Source"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 2995555756696,
+    "encoding": "",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1678385421796,
+    "read_only": false,
+    "read_only_alternatives": []
+}
