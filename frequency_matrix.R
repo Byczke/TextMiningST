@@ -52,8 +52,21 @@ tdm_tfidf_bounds <- TermDocumentMatrix(
   )
 )
 
+dtm_tfidf_bounds <- DocumentTermMatrix(
+  corpus,
+  control = list(
+    weigthing = weightTfIdf,
+    bounds = list(
+      global = c(2,16)
+    )
+  )
+)
+
 tdm_tf_all_m <- as.matrix(tdm_tf_all)
 tdm_tf_all_df <- as.data.frame(tdm_tf_all_m)
+
+tdm_tf_bounds_m <- as.matrix(tdm_tf_bounds)
+tdm_tf_bounds_df <- as.data.frame(tdm_tf_bounds_m)
 
 matrix_file <- "./tdm_tf_all.csv"
 write.table(
