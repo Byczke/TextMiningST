@@ -20,3 +20,40 @@ for (doc_no in 1:length(corpus)) {
   print(rownames(t(as.matrix(tdm_tfidf_all)))[doc_no])
   print(head(sort(t(as.matrix(tdm_tfidf_all))[doc_no,],decreasing = T)))
 }
+
+# chmury tagów
+for (doc_no in 1:length(corpus)) {
+  cloud_file <- paste(
+    clouds_dir,
+    paste(corpus[[doc_no]]$meta$id, ".png", sep = ""),
+    sep = "/"
+  )
+  png(cloud_file)
+  par(mai = c(0,0,0,0))
+  wordcloud(
+    corpus[doc_no],
+    max.words = 200,
+    colors = brewer.pal(8, "PuOr")
+  )
+  dev.off()
+}
+
+cloud_file <- paste(
+  clouds_dir,
+  "cloud.png",
+  sep = "/"
+)
+png(cloud_file)
+par(mai = c(0,0,0,0))
+wordcloud(
+  corpus,
+  max.words = 200,
+  colors = brewer.pal(8, "PuOr")
+)
+dev.off()
+
+
+
+
+
+

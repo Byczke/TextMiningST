@@ -68,6 +68,9 @@ tdm_tf_all_df <- as.data.frame(tdm_tf_all_m)
 tdm_tf_bounds_m <- as.matrix(tdm_tf_bounds)
 tdm_tf_bounds_df <- as.data.frame(tdm_tf_bounds_m)
 
+dtm_tf_all_m <- as.matrix(dtm_tf_all)
+dtm_tfidf_bounds_m <- as.matrix(dtm_tfidf_bounds)
+
 matrix_file <- "./tdm_tf_all.csv"
 write.table(
   tdm_tf_all_m, 
